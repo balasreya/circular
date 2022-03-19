@@ -148,11 +148,28 @@ current=prev;
 prev=next;
 head=prev
 }
+void search()
+{
+    struct node*current=head;
+    int x;
+    while(current!=NULL)
+    {
+        if(current->data==x)
+        {
+            return true;
+        }
+        else
+        {
+        current=current->next;
+        return false;
+        }
+    }
+}
 //Main function.
 void main()
 {
     int choice=0;
-    while(choice<10)
+    while(choice<12)
     {
         printf("\nOperations on Circular linked list\n");
         printf("1.creation of circular linked list\n");
@@ -196,6 +213,13 @@ void main()
             case 9:
                     count();
                     break;
+            case 10:
+                    riverse();
+                    break;
+            case 11:
+                    search();
+                    break;
+              
         }
     }
 }
