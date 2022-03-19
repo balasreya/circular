@@ -136,6 +136,18 @@ void count()
     count+=1;
     printf("\nThe number of elements present in a circular linked list is%d\n",count);
 }
+void reverse()
+{
+struct node*current=head;
+struct node* prev=NULL,next=NULL;
+while(current!=NULL)
+{
+next=current->next;
+prev->next=current;
+current=prev;
+prev=next;
+head=prev
+}
 //Main function.
 void main()
 {
